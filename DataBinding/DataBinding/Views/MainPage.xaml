@@ -4,11 +4,14 @@
 	x:Class="DataBinding.Views.MainPage"
 	xmlns:vm="clr-namespace:DataBinding.ViewModels;assembly=DataBinding">
 	<ContentPage.Content>
-		<StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+		<StackLayout VerticalOptions="CenterAndExpand"
+			HorizontalOptions="FillAndExpand" Padding="10">
 			<StackLayout.BindingContext>
 				<vm:MainPageViewModel />
 			</StackLayout.BindingContext>
-			<Label Text="{Binding Message}" />
+			<Label Text="{Binding Message}" HorizontalOptions="CenterAndExpand" />
+			<Entry Text="{Binding Name}" />
+			<Button Text="Click Me!" Command="{Binding ShowNameCommand}" IsEnabled="{Binding HasValidInput}" />
 		</StackLayout>
 	</ContentPage.Content>
 </ContentPage>
