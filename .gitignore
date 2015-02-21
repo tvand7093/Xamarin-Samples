@@ -4,10 +4,13 @@
 *.obj
 *.elf
 
-//xamarin studio preferences
+# xamarin studio preferences
 *.userprefs
 
-//output folders
+# prevent packages upload
+[Pp]ackages
+
+# output folders
 [Bb]in
 [Bb]uild
 [Dd]ebug
