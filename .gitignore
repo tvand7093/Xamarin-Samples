@@ -4,6 +4,15 @@
 *.obj
 *.elf
 
+//xamarin studio preferences
+*.userprefs
+
+//output folders
+[Bb]in
+[Bb]uild
+[Dd]ebug
+[Rr]elease
+
 # Precompiled Headers
 *.gch
 *.pch
