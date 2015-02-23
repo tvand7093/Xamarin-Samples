@@ -7,6 +7,9 @@
 # xamarin studio preferences
 *.userprefs
 
+# vs stuff
+.vs
+
 # prevent packages upload
 [Pp]ackages
 
