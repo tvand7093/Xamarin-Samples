@@ -7,6 +7,6 @@ Provides a simple way to have a single selection for either a month or a year. C
 After importing the namespace into your XAML file, you can use the following to add it to your view:
 
 ```
-<vms:YearMonthPicker SelectedItem="{Binding Data}" PickerType="{Binding Type}"/>
+<yournamespace:YearMonthPicker SelectedItem="{Binding Data}" PickerType="{Binding Type}"/>
 ```
 Where the Data property is an integer, and the Type is a PickerType bound from a view model.
