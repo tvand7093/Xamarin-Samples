@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:vms="clr-namespace:DatePickerFormat;assembly=DatePickerFormat"
+	x:Class="DatePickerFormat.MainPage">
+	<ContentPage.BindingContext>
+		<vms:ViewModel />
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<vms:YearMonthPicker SelectedItem="{Binding Data}" PickerType="{Binding Type}"/>
+	</ContentPage.Content>
+</ContentPage>
