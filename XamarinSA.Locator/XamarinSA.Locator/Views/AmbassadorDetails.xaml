@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:vms="clr-namespace:XamarinSA.Locator.ViewModels;assembly=XamarinSA.Locator"
+	xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+	Title="Ambassador Info"
+	xmlns:consts="clr-namespace:XamarinSA.Locator.Misc;assembly=XamarinSA.Locator"
+	x:Class="XamarinSA.Locator.Views.AmbassadorDetails"
+	BackgroundColor="{x:Static consts:ColorStyles.XamarinDark}">
+
+	<ContentPage.BindingContext>
+		<!-- Do not set in XAML (use ctor) -->
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<StackLayout Padding="10">
+			<Label Text="{Binding Xsa.Name}" HorizontalOptions="CenterAndExpand" TextColor="White" VerticalOptions="Fill" />
+			<Image Source="{Binding Xsa.GravitarLarge}" HorizontalOptions="Center" VerticalOptions="Fill"
+				HeightRequest="150" WidthRequest="150"/>
+			<Label Text="{Binding Xsa.Location.LocationString}" TextColor="White"
+				HorizontalOptions="CenterAndExpand" VerticalOptions="Fill"/>
+
+			<StackLayout Orientation="Horizontal" VerticalOptions="Fill">
+				<Label Text="Twitter:" TextColor="White" HorizontalOptions="EndAndExpand"/>
+				<Button Text="{Binding Xsa.Twitter}" TextColor="{x:Static consts:ColorStyles.XamarinLightBlue}"
+					HeightRequest="20" Command="{Binding OpenCommand}" CommandParameter="twitter"
+					HorizontalOptions="StartAndExpand"/>
+			</StackLayout>
+					
+			<StackLayout Orientation="Horizontal" VerticalOptions="Fill">
+				<Label Text="Blog:" TextColor="White" HorizontalOptions="EndAndExpand"/>
+				<Button Text="{Binding Xsa.Blog}" TextColor="{x:Static consts:ColorStyles.XamarinLightBlue}"
+					HeightRequest="20" Command="{Binding OpenCommand}" CommandParameter="blog"
+					HorizontalOptions="StartAndExpand"/>
+			</StackLayout>
+			<maps:Map HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+			</maps:Map>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

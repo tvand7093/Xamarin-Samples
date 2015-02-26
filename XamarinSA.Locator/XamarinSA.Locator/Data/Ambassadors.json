@@ -1,0 +1,31 @@
+﻿
+[
+	{
+		"Name":"Tyler Vanderhoef",
+		"Email":"tyler.j.vanderhoef@gmail.com",
+		"Twitter":"@sonoilmedico",
+		"Facebook":"sonoilmedico",
+		"Blog":"xamandor.me",
+		"Location": {
+			"Country":"USA",
+			"StateRegion":"WA",
+			"City":"Vancouver",
+			"Latitude":"45.6333",
+			"Longitude":"122.6000"
+		}
+	},
+	{
+		"Name":"Pierce Boggan",
+		"Email":"pierce@pierceboggan.com",
+		"Twitter":"pierceboggan",
+		"Facebook":"",
+		"Blog":"test.me",
+		"Location": {
+			"Country":"USA",
+			"StateRegion":"AL",
+			"City":"Auburn",
+			"Latitude":"95.6333",
+			"Longitude":"132.6000"
+		}
+	},
+]

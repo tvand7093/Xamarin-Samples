@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	xmlns:views="clr-namespace:XamarinSA.Locator.Views;assembly=XamarinSA.Locator"
+	xmlns:vm="clr-namespace:XamarinSA.Locator.ViewModels;assembly=XamarinSA.Locator"
+	xmlns:cells="clr-namespace:XamarinSA.Locator.Views.Cells;assembly=XamarinSA.Locator"
+	Title="Xamarin Student Ambassadors"
+	x:Class="XamarinSA.Locator.Views.AmbassadorList">
+	<ContentPage.BindingContext>
+		<vm:AmbassadorListVM />
+	</ContentPage.BindingContext>
+	<ContentPage.Content>
+		<views:StyledListView ItemsSource="{Binding Items}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<cells:AmbassadorCell ImageSource="{Binding Gravitar}" Text="{Binding Name}"
+						Detail="{Binding Location.LocationString}" TextColor="White" DetailColor="White"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</views:StyledListView>
+	</ContentPage.Content>
+</ContentPage>
+	 <!--Image="{Binding Gravitar}" Title="{Binding Name}" 
+						Detail="{Binding Location.LocationString}"-->
