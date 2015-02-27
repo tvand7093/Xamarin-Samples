@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+	BackgroundColor="Aqua"
+	Padding="20"
+	HorizontalOptions="CenterAndExpand"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="FormsCustomControls.Controls.CustomHeaderBox">
+	<StackLayout Orientation="Horizontal">
+		<Label x:Name="LeftTitleLabel" HorizontalOptions="StartAndExpand" />
+		<Label x:Name="RightTitleLabel" HorizontalOptions="EndAndExpand" />
+	</StackLayout>
+</ContentView>
