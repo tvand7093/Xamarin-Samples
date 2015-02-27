@@ -17,21 +17,32 @@ namespace FormsCustomControls.ViewModels
 			}
 		}
 
-		private string title;
-		public string Title { 
-			get { return title; }
+		private string left;
+		public string Left { 
+			get { return left; }
 			set {
-				title = value;
-				OnPropertyChanged ("Title");
+				left = value;
+				OnPropertyChanged ("Left");
+			}
+		}
+
+		private string right;
+		public string Right { 
+			get { return right; }
+			set {
+				right = value;
+				OnPropertyChanged ("Right");
 			}
 		}
 
 		public TestViewModel ()
 		{
-			Title = "Foo";
+			Left = "Foo";
+			Right = "Bar";
 
 			Device.StartTimer (new TimeSpan(0, 0, 5), () => {
-				Title = "Bar";
+				Left = "Bar";
+				Right = "Foo";
 				return true;
 			});
 		}

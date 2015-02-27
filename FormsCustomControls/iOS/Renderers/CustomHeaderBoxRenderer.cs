@@ -5,7 +5,7 @@ using Xamarin.Forms;
 using FormsCustomControls.iOS.Renderers;
 using UIKit;
 
-[assembly: ExportRenderer((typeof(CustomHeaderBox)), typeof(CustomHeaderBoxRenderer))]
+//[assembly: ExportRenderer((typeof(CustomHeaderBox)), typeof(CustomHeaderBoxRenderer))]
 namespace FormsCustomControls.iOS.Renderers
 {
 	public class CustomHeaderBoxRenderer : ViewRenderer<CustomHeaderBox, UIView>
@@ -15,9 +15,9 @@ namespace FormsCustomControls.iOS.Renderers
 			base.OnElementChanged (e);
 
 			//Set border color, width, and radius (make rounded corners)
-			Layer.BorderColor = UIColor.LightGray.CGColor;
-			Layer.BorderWidth = 1;
-			Layer.CornerRadius = 30;
+//			Layer.BorderColor = UIColor.LightGray.CGColor;
+//			Layer.BorderWidth = 1;
+//			Layer.CornerRadius = 30;
 		}
 
 		public CustomHeaderBoxRenderer ()
