@@ -37,9 +37,11 @@ namespace FormsCustomControls.ViewModels
 
 		public TestViewModel ()
 		{
+			//set initial values
 			Left = "Foo";
 			Right = "Bar";
 
+			//after 5 seconds, switch the values around
 			Device.StartTimer (new TimeSpan(0, 0, 5), () => {
 				Left = "Bar";
 				Right = "Foo";
