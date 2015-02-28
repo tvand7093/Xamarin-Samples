@@ -15,7 +15,7 @@ namespace FormsCustomControls.Controls
 				defaultBindingMode: BindingMode.TwoWay,
 				propertyChanging: (bindable, oldValue, newValue) => {
 					var ctrl = (CustomHeaderBox)bindable;
-					ctrl.LeftTitle = newValue.ToString();
+					ctrl.LeftTitle = newValue;
 				});
 
 		public static BindableProperty RightTitleProperty = 
@@ -24,7 +24,7 @@ namespace FormsCustomControls.Controls
 				defaultBindingMode: BindingMode.TwoWay,
 				propertyChanging: (bindable, oldValue, newValue) => {
 					var ctrl = (CustomHeaderBox)bindable;
-					ctrl.RightTitle = newValue.ToString();
+					ctrl.RightTitle = newValue;
 				});
 					
 		public string LeftTitle {
