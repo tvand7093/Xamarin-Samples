@@ -16,6 +16,7 @@ namespace DataBinding.Localization
 	public class TranslateExtension : IMarkupExtension
 	{
 		readonly CultureInfo ci;
+		//this will be the name of the partial class givent to your AppResources file.
 		const string ResourceId = "DataBinding.Localization.AppResources";
 
 		public TranslateExtension() {
