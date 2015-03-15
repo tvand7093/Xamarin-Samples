@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+	x:Class="DataBinding.Views.MainPage"
+	xmlns:languages="clr-namespace:DataBinding.Localization;assembly=DataBinding"
+	xmlns:vm="clr-namespace:DataBinding.ViewModels;assembly=DataBinding">
+	<ContentPage.Content>
+		<StackLayout VerticalOptions="CenterAndExpand"
+			HorizontalOptions="FillAndExpand" Padding="10">
+			<StackLayout.BindingContext>
+				<vm:MainPageViewModel />
+			</StackLayout.BindingContext>
+			<Label Text="{Binding Message}" HorizontalOptions="CenterAndExpand" />
+			<Entry Text="{Binding Name}" />
+			<Button Text="{languages:Translate ButtonText}" Command="{Binding ShowNameCommand}" IsEnabled="{Binding HasValidInput}" />
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>
