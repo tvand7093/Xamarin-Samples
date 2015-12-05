@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MasterDetailPage 
+	xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:pages="clr-namespace:MasterDetailNavigation.Pages;assemlby=MasterDetailNavigation"
+	xmlns:vm="clr-namespace:MasterDetailNavigation.ViewModels;assemlby=MasterDetailNavigation"
+	x:Class="MasterDetailNavigation.Pages.CustomMasterDetailPage"
+	Title="MasterDetail"
+	IsGestureEnabled="{Binding CanShowFlyout, Mode=TwoWay}"
+	IsPresented="{Binding IsFlyoutOpen, Mode=TwoWay}">
+	<MasterDetailPage.BindingContext>
+		<vm:MasterDetailViewModel />
+	</MasterDetailPage.BindingContext>
+
+	<MasterDetailPage.Master>
+		<pages:MasterListViewPage />
+	</MasterDetailPage.Master>
+
+	<MasterDetailPage.Detail>
+		<NavigationPage>
+			<x:Arguments>
+				<pages:LoginPage />
+			</x:Arguments>
+		</NavigationPage>
+	</MasterDetailPage.Detail>
+
+</MasterDetailPage>
